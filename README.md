@@ -5,7 +5,8 @@ Purpose:
 Deploy Nigel’s njmon monitoring tool in docker containers
 Procedure:
 
- Pull influxdb and Grafana images from this repository and deploy it as individual containers or services in swarm cluster
+ Pull influxdb and Grafana images from docker repository (grgopinath/containerized_njmon) and deploy it as individual containers or services in swarm cluster
+
 Ports:
 
  Below ports are exposed in respective container images and it must be published.
