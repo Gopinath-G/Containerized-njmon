@@ -17,7 +17,7 @@ Grafanav1
 
    -    Ports 3000
  
- Depoy using the docker file
+ Deploy using the docker file
  
  example:
  docker stack deploy -c docker-compose.yml njmon
