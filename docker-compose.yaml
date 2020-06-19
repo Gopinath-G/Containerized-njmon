@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  influxdb:
+    image: 127.0.0.1:5000/njmon_influxdb:v1
+    volumes:
+      - db-data:/njmon
+    ports:
+      - "8086:8086"
+      - "8181:8181"
+    deploy:
+      placement:
+        constraints:
+          - "node.role==manager"
+
+  grafana:
+    image: 127.0.0.1:5000/grafana:v1
+    ports:
+      - "3000:3000"
+    deploy:
+      replicas: 2
+      placement:
+        constraints:
+          - "node.role==manager"
+
+volumes:
+  db-data:
